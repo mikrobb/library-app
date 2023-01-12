@@ -9,24 +9,24 @@ function App() {
   const [newSeacrh, setNewSearch] = useState("");
 
   useEffect(() => {
-    fetch("https://www.googleapis.com/books/v1/volumes?q=" + search)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}`)
       .then((data) => data.json())
       .then((json) => setBooks(json.items));
-  }, [setBooks]);
+  }, [setBooks, search]);
 
   console.log(search);
   console.log(books);
 
-  // function GetBooks() {
-  //   setSearch(newSeacrh);
-  // }
+  function GetBooks() {
+    // setSearch(newSeacrh);
+  }
 
   if (!books) return <div>Loading...</div>;
   return (
     <>
       <div>
-        <input type="text" onChange={(e) => setNewSearch(e.target.value)} />
-        <button onClick={() => setSearch(newSeacrh)}>Submit</button>
+        <input type="text" onChange={(e) => setSearch(e.target.value)} />
+        <button onClick={() => GetBooks}>Submit</button>
       </div>
 
       <div>
