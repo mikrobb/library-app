@@ -28,11 +28,11 @@ export default function Homepage() {
         />
       </div>
 
-      <div>
+      <div className="containerBooks">
         {books.map((info) => (
-          <>
+          <div className="flex">
             <Books info={info} />
-          </>
+          </div>
         ))}
       </div>
     </>
