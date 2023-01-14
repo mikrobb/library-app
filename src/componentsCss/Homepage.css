@@ -10,3 +10,17 @@
     display: block;
     margin: auto;
 }
+
+.containerBooks{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
