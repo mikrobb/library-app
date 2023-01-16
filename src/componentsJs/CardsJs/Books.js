@@ -22,7 +22,9 @@ export default function Books({ info }) {
         </div>
       </div>
       <div>
-        <div className="btnView">View more</div>
+        <a href={info.volumeInfo.infoLink} className="btnView">
+          View more
+        </a>
       </div>
     </div>
   );
